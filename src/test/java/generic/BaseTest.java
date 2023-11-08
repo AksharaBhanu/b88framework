@@ -74,17 +74,14 @@ public class BaseTest
 		}
 		
 		
-		
-		
-		Reporter.log("Set ITO:"+ITO,true);
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Integer.valueOf(ITO)));
-		
 		Reporter.log("Enter the URL:"+appURL,true);
 		driver.get(appURL);
 		
-		
 		Reporter.log("Maximize the browser",true);
 		driver.manage().window().maximize();
+		
+		Reporter.log("Set ITO:"+ITO,true);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Integer.valueOf(ITO)));
 		
 		Reporter.log("Set ETO:"+ETO,true);
 		wait=new WebDriverWait(driver, Duration.ofSeconds(Integer.valueOf(ETO)));
