@@ -21,7 +21,7 @@ public class ValidLogin extends BaseTest
 //		2. enter valid pw
 		loginPage.setPassword(pw);
 //		3. click on login button
-//		loginPage.clickLoginButton();
+		loginPage.clickLoginButton();
 //		4. home page should be displayed
 		DashboardPage dashboardPage=new DashboardPage(driver);
 		boolean result = dashboardPage.verifyDashBoardPageIsDisplayed(wait);
